@@ -24,11 +24,11 @@ function setup() {
 	
 	roofObject = new Roof(370,100,300,25);
 
-	rope1 = new Rope(BobObject1.body, roofObject.body, -95, 0);
+	rope1 = new Rope(BobObject1.body, roofObject.body, -100, 0);
 	rope2 = new Rope(BobObject2.body, roofObject.body, -50, 0);
 	rope3 = new Rope(BobObject3.body, roofObject.body, 0, 0);
 	rope4 = new Rope(BobObject4.body, roofObject.body, 50, 0);
-	rope5 = new Rope(BobObject5.body, roofObject.body, 95, 0);
+	rope5 = new Rope(BobObject5.body, roofObject.body, 100, 0);
 
 }
 
@@ -57,7 +57,8 @@ function draw() {
 }
 
 function keyPressed(){
-    if(keyCode === 24 ){
-      BobObject1.body.velocityX = -5; 
+    if(keyCode === UP_ARROW ){
+	  	
+      Matter.Body.applyForce(BobObject1.body,BobObject1.body.position,{x:-60,y:60});
     }
 }
