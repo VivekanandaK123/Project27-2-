@@ -16,7 +16,7 @@ function setup() {
 	world = engine.world;
 	Engine.run(engine);
 
-	BobObject1 = new Bob(270,450,25);
+	BobObject1 = new Bob(270,350,25);
 	BobObject2 = new Bob(320,450,25);
 	BobObject3 = new Bob(370,450,25);
     BobObject4 = new Bob(420,450,25);
